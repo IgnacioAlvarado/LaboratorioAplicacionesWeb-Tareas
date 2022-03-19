@@ -1,0 +1,29 @@
+extends ../layout 
+
+block content
+    a(href='/') Home
+    br
+    a(href='/bicicletas') Listado
+    br
+    h1 Nueva bicicleta 
+    form(action='/bicicletas/create' method='POST')
+        table.table 
+            tr 
+                td
+                    label(for='color') Color:
+                td
+                    input#color(type='text' name='color')
+            tr 
+                td
+                    label(for='modelo') Modelo:
+                td
+                    input#modelo(type='text' name='modelo')
+            tr 
+                td
+                    label(for='ubicacion') Ubicación (lat,lon):
+                td
+                    input#lat(type='text' name='ubicacion')
+            tr
+                td 
+                td
+                    input.btn(type='submit' value='ADD')
