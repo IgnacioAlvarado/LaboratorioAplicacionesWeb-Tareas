@@ -1,0 +1,22 @@
+extends ../layout
+
+block content 
+    a(href='/') Volver a Home 
+    br
+    h1 Login 
+    form(action='/login' method='POST')
+        table.table
+            tr
+                td
+                    label(for='email') E-mail: 
+                td 
+                    input#email(type='email' name='email' placeholder='correo@dominio.com')
+            tr
+                td
+                    label(for='password') Password:
+                td 
+                    input#password(type='password' name='password')
+            tr 
+                td 
+                td 
+                    input.btn(type='submit' value='Entra')
