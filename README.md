@@ -18,5 +18,7 @@ Tareas Laboratorio de Aplicaciones Web
   5,6. Sin embargo si el usuario no es verificado al momento de introducir la información del usuario, el sistema lo redigirá a la página de Login, igualmente si los datos son incorrectos.
   
   5,7. Acceder a https://ethereal.email/login e introducir las credenciales del usuario que se encuentra en el archivo mailer.js en la carpeta actividad-archivos-iniciales\mailer y dirigirse a la sección de messages
+  
   5,8. Dar clic en el mensaje dirigido al correo introducido en el registro y acceder al link que se proporciona en ese correo, esto llevara al home de la página.
+  
   5,9. Ya con esto se puede ir a Login e introducir los datos, si los datos son correctos y el usuario está verificado debe redirigir al Home
