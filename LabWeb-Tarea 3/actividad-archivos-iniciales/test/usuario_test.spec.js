@@ -43,13 +43,13 @@ describe('Testing usuarios', function(){
             let hoy = new Date()
             let mañana = new Date()
             mañana.setDate(hoy.getDate()+1)
-            /*let reserva = new Reserva({desde:hoy, hasta:mañana, bicicleta: bicicleta, usuario: usuario})
-            reserva.save()*/
+            let reserva = new Reserva({desde:hoy, hasta:mañana, bicicleta: bicicleta, usuario: usuario})
+            reserva.save()
 
             usuario.reservar(bicicleta.id, hoy, mañana, function(err, reserva){
                 Reserva.find({}).populate('bicicleta').populate('usuario').exec(function(err, reservas){
                     //console.log(reservas[0])
-                    expect(reservas.length).to.equal(1)
+                    expect(reservas.length).to.equal(2)
                     expect(reservas[0].diasDeReserva()).to.equal(2)
                     expect(reservas[0].bicicleta.code).to.equal(1)
                     expect(reservas[0].usuario.nombre).to.equal(usuario.nombre)
